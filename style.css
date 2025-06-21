@@ -380,10 +380,6 @@ button:hover {
   background: #4466ccff;
   outline: none;
 }
-#closeFavoritesBtn {
-  margin-top: 10px;
-  background: #3355aa;
-}
 
 /* Comments styling */
 .comment {
@@ -453,6 +449,11 @@ button:hover {
 }
 #feedbackSection textarea {
   resize: vertical;
+}
+#feedbackStatus {
+  margin-top: 6px;
+  color: #aaddff;
+  font-style: italic;
 }
 
 /* Responsive tweaks */
