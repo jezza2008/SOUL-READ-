@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Soul - Quotes (Night Sky Edition)</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div id="stars" aria-hidden="true"></div>
+
+  <div id="clouds" aria-hidden="true">
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud cloud3"></div>
+    <div class="cloud cloud4"></div>
+  </div>
+
+  <button id="darkModeToggle" aria-pressed="false" aria-label="Toggle dark/light mode">☀️</button>
+
+  <div class="container" tabindex="0" role="main" aria-live="polite">
+    <h1 class="title">The Soul</h1>
+
+    <input type="search" id="searchInput" placeholder="Search quotes..." aria-label="Search quotes" />
+
+    <div class="quote-box" aria-live="polite" aria-atomic="true">
+      <p id="quoteText" tabindex="0" aria-label="Current quote">Loading...</p>
+    </div>
+
+    <div class="nav-buttons" role="navigation" aria-label="Quote navigation">
+      <button id="prevBtn" aria-label="Previous Quote">← Previous</button>
+      <button id="nextBtn" aria-label="Next Quote">Next →</button>
+    </div>
+
+    <button id="favoriteBtn" aria-pressed="false" aria-label="Add quote to favorites" style="margin-top:10px;">🤍 Favorite</button>
+
+    <div id="socialShare" aria-label="Share quote on social media" style="margin-top:15px;">
+      <button id="copyBtn" aria-label="Copy quote to clipboard" title="Copy quote">📋 Copy</button>
+      <button id="readBtn" aria-label="Read quote aloud" title="Read aloud">🔊 Read Aloud</button>
+      <button id="shareTwitterBtn" aria-label="Share quote on Twitter" title="Share on Twitter">🐦 Twitter</button>
+      <button id="shareFBBtn" aria-label="Share quote on Facebook" title="Share on Facebook">📘 Facebook</button>
+      <button id="showFavoritesBtn" aria-label="Show favorite quotes" title="Favorites">⭐ Favorites</button>
+    </div>
+
+    <div class="comments" aria-label="Comments section" style="margin-top: 25px;">
+      <h3>Comments (<span id="commentsCount">0</span>)</h3>
+      <div id="commentsList" tabindex="0" aria-live="polite" aria-relevant="additions"></div>
+
+      <label for="nameInput" style="margin-top:15px;display:block;">Your Name:</label>
+      <input id="nameInput" type="text" placeholder="Enter your name" aria-required="true" />
+
+      <label for="commentInput" style="margin-top:15px;display:block;">Write a comment:</label>
+      <textarea id="commentInput" placeholder="Write a comment..." aria-required="true" rows="3"></textarea>
+
+      <button id="postCommentBtn" aria-label="Post comment">Post Comment</button>
+    </div>
+
+    <div id="feedbackSection" aria-label="Feedback form">
+      <h3>Feedback</h3>
+      <textarea id="feedbackInput" placeholder="Your feedback..." rows="3" aria-label="Write your feedback"></textarea>
+      <button id="feedbackSubmit" aria-label="Submit feedback">Submit Feedback</button>
+      <p id="feedbackStatus" aria-live="polite" role="status"></p>
+    </div>
+  </div>
+
+  <div id="volumeContainer" aria-label="Volume control">
+    <label for="volumeSlider" id="volumeLabel">Volume</label>
+    <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.2" aria-labelledby="volumeLabel" />
+  </div>
+
+  <div id="favoritesModal" role="dialog" aria-modal="true" aria-labelledby="favoritesTitle" tabindex="-1" aria-hidden="true">
+    <h2 id="favoritesTitle">Favorite Quotes</h2>
+    <div id="favoritesList" tabindex="0"></div>
+    <button id="closeFavoritesBtn" aria-label="Close favorites modal">Close</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
